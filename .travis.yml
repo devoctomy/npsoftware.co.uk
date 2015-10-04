@@ -1,0 +1,26 @@
+language: ruby
+
+rvm:
+- 2.2.1
+
+before_script:
+- chmod +x ./script/cibuild
+
+script: "./script/cibuild"
+
+branches:
+  only:
+  - staging
+  - master
+
+deploy:
+  provider: s3
+  access_key_id: AKIAI5E6FVPYHNOBRK4A
+  secret_access_key:
+    secure: ACtXsWYBWFIREJaHuWzq831RE5F6M1nDNgBIMvkQsSX1yedHiT5hCn3YM2Nda5UAjYwbv1NuOON+DFl/uCxHF/M64gDaQDK9vASO1Ox2HCs7P+hYpfS+LuB9itleNIRQzD9+TAqo4RHhdUGN//L1E9dZccS3iny+VXheZCOmsIA7imG5tkNwhBsFtJVkZImE+4SofeAAosjfm+m/66YnyW3Twg08K19kuCzQqruIcqb72vcpAj3KfsjfYDmS6JMHcSsOa42jiRKfEuW1IHILEF50u+SJ165c7Rj1VO7PnwMUfYeFn3nDNVwip3NT3wrl5ZzJB28/wdCwy/lPi8pLSjZ/9HoWT9ChXds++6Bq9cFV59Oy4qvizj4d3CIrC5jgdrsdSz1OsaPwxRoxbYWtn4cM2nhALl039sdKnu5mxLcNs5YtL4cmRHMfG0INee+kUXbhYIkRvWqOMrNCWLYjKApDajb4gtaPSQwlOCzm4V8X9uApJYwiyOwgmhNzAZbDvOg8qVmkFxD+VK/4gTPZ2SuOkLLkmwu9DgpY6r6yszXtNeQMpldl4tqeCwvY/3QDuiKAQQfKlj9drapDsw2vaYrkU4USwWgw/PJL9ii2Ye0m//J/pnbfTftne7vk18QSvTW5+WCI7SJ4meAMd1wr668Dnqr8c7qQ4ESuHeIrJMY=
+  bucket: "www.npsoftware.co.uk"
+  local_dir: _site
+  skip_cleanup: true
+  acl: public_read
+  on:
+    branch: master

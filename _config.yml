@@ -1,0 +1,43 @@
+# Site settings
+title: npSoftware
+description: Personal blog of Nick Pateman
+baseurl: ""
+url: ""
+
+# Test settings
+destination: _site
+host: 0.0.0.0
+
+# User settings
+username: Nick Pateman
+user_description: Tech Maniac and Solutions Architect
+user_title: Tech Maniac and Solutions Architect
+email: nick@npsoftware.co.uk
+twitter_username: npsoftwareuk
+disqus_username: npsoftware
+facebook_username: npsoftwareuk
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: /:title/
+
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
+
+# Links to include in menu navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+  - title: Tags
+    url: /tags
+  - title: About Me
+    url: /about
+
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules', 'vendor']
