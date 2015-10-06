@@ -25,7 +25,7 @@ And yup, just incase you didn't read that correctly, my mum is now authoring her
 
 As you would expect, there can be a huge difference in usability between site templates, but not only that, some really handy features too, like my mums new site, allows you to configure multiple authors.  This simple ability allows you to create guest blog posts much easier than the template I'm currently using.
 
-The template I chose for knittedbysteph.com is the [So Simple Theme](http://).  I removed what was the 'Blog' section of the theme and repurposed the 'Articles' section as this provides pretty much the same functionality, only with guest author support, great!  This theme also has a whole host of additional social networking integration options that aren't available on mine, although they aren't all essential for my purposes, they are nice to have.
+The template I chose for knittedbysteph.com is the [So Simple Theme](https://github.com/mmistakes/so-simple-theme/).  I removed what was the 'Blog' section of the theme and repurposed the 'Articles' section as this provides pretty much the same functionality, only with guest author support, great!  This theme also has a whole host of additional social networking integration options that aren't available on mine, although they aren't all essential for my purposes, they are nice to have.
 
 ## Other Lessons Learned
 
