@@ -2,7 +2,7 @@
 layout: post
 title: "A Fresh Start"
 date: 2015-10-03 11:00:00
-image: '/assets/img/'
+image: '/assets/img/swedish_countryside_2.jpg'
 description: 'A new, simpler site'
 tags:
 - jekyll
