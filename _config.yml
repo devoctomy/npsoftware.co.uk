@@ -4,7 +4,7 @@
 title: npSoftware
 description: Personal blog of Nick Pateman
 baseurl: ""
-url: ""
+url: "http://www.npsoftware.co.uk"
 
 # Test settings
 destination: _site
