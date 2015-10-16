@@ -46,8 +46,8 @@ It starts with them talking about the first submarine called "The Turtle", which
 
 ![The Turtle submarine](/assets/img/turtle-sub.gif)
 
-Anyway the documentary progresses and what I learnt from it is that a submarine would never be designed in the way I had dreamt as it would cause too much disurbance by boiling water being ejected from the back of the submarine, not very stealthy huh?  So yeah, it may seem "Like gold dust slipping through your fingertips", but fools gold in this instance.
+Anyway the documentary progresses and what I learnt from it is that a submarine would never be designed in the way I had dreamt as it would cause too much disturbance by boiling water being ejected from the back of the submarine, not very stealthy huh?  So yeah, it may seem "Like gold dust slipping through your fingertips", but only *fools* gold in this instance.
 
 ## Madness & Inventors
 
-For a brief moment in my hazy state I thought I had something really cool then, for a brief moment I was some kind of mad scientist.  Well for a moment at least, but to be fair sometimes things are still meant to be experimented with even if you think you wont get the outcome you want, obviously I'm not talking about going out and trying to make a nuclear submarine, but I think you know what I'm getting at, besides I don't think B&Q sell uranium do they?
+For a brief moment in my hazy state I thought I had something really cool, for a brief moment I was some kind of mad inventor.  Well for a moment at least, but to be fair sometimes things are still meant to be experimented with even if you think you wont get the outcome you want, obviously I'm not talking about going out and trying to make a nuclear submarine, but I think you know what I'm getting at, besides I don't think B&Q sell uranium do they?
