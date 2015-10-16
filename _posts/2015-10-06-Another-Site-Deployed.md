@@ -5,9 +5,9 @@ date: 2015-10-06 20:00:00
 image: '/assets/img/website-designing.jpg'
 description: 'Two down, two to go.'
 tags:
-- jekyll
-- website
-- technical
+ - jekyll
+ - website
+ - technical
 twitter_text: 'Another Site Deployed'
 ---
 

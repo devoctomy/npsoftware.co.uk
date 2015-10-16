@@ -5,9 +5,9 @@ date: 2015-10-10 14:00:00
 image: '/assets/img/advanced-warfare-shield.jpg'
 description: 'Get in early, play lots, or die lots.".'
 tags:
-- ps4
-- gaming
-- multiplayer
+ - ps4
+ - gaming
+ - multiplayer
 twitter_text: 'Multiplayer Gaming on PS4'
 ---
 

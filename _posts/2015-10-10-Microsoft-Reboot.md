@@ -5,11 +5,11 @@ date: 2015-10-10 12:00:00
 image: '/assets/img/microsoft-headquarters.jpg'
 description: 'Is it too early to say "I told you so?".'
 tags:
-- tech
-- microsoft
-- surface
-- lumia
-- windows
+ - tech
+ - microsoft
+ - surface
+ - lumia
+ - windows
 twitter_text: 'Microsoft Reboot'
 ---
 
