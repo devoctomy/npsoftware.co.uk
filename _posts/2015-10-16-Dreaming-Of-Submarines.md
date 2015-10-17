@@ -30,13 +30,13 @@ Now, I know I'm quite technically minded but I'm by no means a scientist, or eve
 
 So it started off with me whitnessing what seemed to be some kind of political feud, some politician was claiming that the country had been put into jeopardy by getting rid of its nuclear deterrents.  Now this isn't really surprising as this sort of shit is actually going on in the news at the moment with Jeremy Corbyn being lambasted for suggesting we should ditch Trident.  But that aside, the next thing I knew, I was in a submarine of sorts.  It was quite a large room with a huge glass walled area in the middle exposing a huge tank of water which was connected to the ceiling, underneath it, a nuclear reactor.  I watched as several long rods were carefully inserted into the reactor, 2 small ones on the side at a 45 degree angle and one long one in the front.  Then the reactor was turned on, wow, the sound and feeling of power emanating from this thing shocked me into waking up.  I can't say I've ever heard sound like *that* in a dream before, even during hypnagoia.  I've experienced amazingly beautiful or even haunting music, but rarely bass like that.
 
-![The Submarine Reactor Room](/assets/img/inside_sub1.png)
+![The Submarine Reactor Room](/assets/img/insidesub_1.png)
 
 > The Submarine Reactor Room:  Aside from the picture looking shit, it's also supposed to look like a tank stretching down from the ceiling of the chamber with a reactor underneath.  I've drawn red arrows where the parts were inserted into the reactor.  Yeah I know the 2 on the side look a little cock-like, lol!
 
 As I woke, I just thought 'Wow! Cool!', and then rolled over to go back to sleep again.  I was instantly back in the submarine, remember that I am fully conscious during all of this and am well aware that I'm just lying in bed "dreaming", but that's what makes it so cool, anyone that's ever had a lucid dream will say the same, you don't want it to end.  So I'm back in this reactor room, or whatever it was, and this time I saw the reactor being engaged into the tank of water above it, this instantly caused the water to start boiling, at that point I then ended up inside the tank, watching the water being boiled violently before being funneled through a huge rifled tube leading to the end of the submarine, where the water started coming out with immense force.  I woke up again, and that was pretty much it.  Aside from then lying there wondering how that would work, could you suck in cold water from the front of submarine, boil it in the middle then force it out the back as I saw?  I have no idea.
 
-![Sinside The Reactor](/assets/img/inside_sub2.png)
+![Sinside The Reactor](/assets/img/insidesub_2.png)
 
 >  This is inside of the reactor itself, the red spiral line shows the way the water rifled through the "ejection" tube to the rear of the sub.
 
