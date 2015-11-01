@@ -580,7 +580,6 @@ body.search-overlay:after {
     border-radius: 50%}
 html, body {
     height: 100%
-	overflow-x: hidden;
 }
 .header-site, .header-post {
     background: #d24726;
