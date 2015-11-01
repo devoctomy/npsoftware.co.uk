@@ -5,6 +5,7 @@ title: npSoftware
 description: Personal blog of Nick Pateman
 baseurl: ""
 url: "http://www.npsoftware.co.uk"
+googleanalyticsid: UA-69539327-1
 
 # Test settings
 destination: _site
