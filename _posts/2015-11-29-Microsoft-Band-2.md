@@ -19,7 +19,7 @@ First points to note are the packaging of the product.  I'm not going to do an u
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hGTUbImz2KQ" frameborder="0" allowfullscreen></iframe>
 
-The box is pretty basic, very simplistic design and is consistent with Microsoft's other product boxes at current, including the Surface.  Once you slide the outer sleeve off, it reveals the band, sitting firmly inside of the packaging.  It looks great, sleek and surprisingly thin.  The only other thing to note in the packaging aside from all the usual bits of paqper that you toss to one side, is the charger, it's a strange thing but then you can kind of see why they had to opt for a propriotary connector and not micro USB.
+The box is pretty basic, very simplistic design and is consistent with Microsoft's other product boxes at current, including the Surface.  Once you slide the outer sleeve off, it reveals the band, sitting firmly inside of the packaging.  It looks great, sleek and surprisingly thin.  The only other thing to note in the packaging aside from all the usual bits of paper that you toss to one side, is the charger, it's a strange thing but then you can kind of see why they had to opt for a propriotary connector and not micro USB.
 
 The bits of paper crap that come in the box are literally that, totally useless and don't even tell you how to setup your band with your phone.  I was surprised about that and thought it kind of shows Microsofts usual haphazard way of handling things, very unpredictable.
 
