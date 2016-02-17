@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Creativity"
+title: 'Creativity'
 date: 2016-02-17 21:30:00
-image: "/assets/img/money.jpg"
-description: "Being creative and making money isn't easy, deal with it."
+image: '/assets/img/money.jpg'
+description: 'Being creative and making money is not easy, deal with it.'
 tags:
  - programming
  - moan
  - spotify
  - moan
-twitter_text: "Being creative and making money isn't easy, deal with it."
+twitter_text: 'Being creative and making money is not easy, deal with it.'
 ---
 
 This isn't the topic that I had originally planned for my next blog post but after reading a few articles lately on Spotify getting bitched at by artists and labels alike for not paying out enough money, I though I would throw in my 2 pence worth, as a creative person myself trying to make my way in this world.
