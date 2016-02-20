@@ -12,7 +12,7 @@ tags:
 twitter_text: 'Continuum, using your phone as a desktop PC'
 ---
 
-Just recently I purchased a Microsoft Display Dock for my Lumia 950 from Amazon.  After a pain in the arse getting the item delivered, along with a cheap Samsung TV to go with it, I've had a few uses of it and thought I'd give my opinions on it in a blog post, seeing as I've already reviewed the 950 [http://www.npsoftware.co.uk/Microsoft-Lumia-950/](here).  If you haven't seen my review of the phone you might want to do so before continuing.
+Just recently I purchased a Microsoft Display Dock for my Lumia 950 from Amazon.  After a pain in the arse getting the item delivered, along with a cheap Samsung TV to go with it, I've had a few uses of it and thought I'd give my opinions on it in a blog post, seeing as I've already reviewed the 950 [here](http://www.npsoftware.co.uk/Microsoft-Lumia-950/).  If you haven't seen my review of the phone you might want to do so before continuing.
 
 ## Ideal Setup
 
