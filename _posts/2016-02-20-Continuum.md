@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Creativity'
+title: 'Continuum'
 date: 2016-02-20 12:00:00
 image: '/assets/img/continuum.jpg'
 description: 'Continuum, using your phone as a desktop PC'
