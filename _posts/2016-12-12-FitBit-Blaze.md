@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: 'FitBit Blaze or Microsoft Band 2 - A Year On'
 date: 2016-12-12 19:0:00
