@@ -101,6 +101,12 @@ Setting up my FitBit certainly wasn't trouble free, so I have listed all of my i
 
 > Please note, the initial experience may be nicer on other platforms, I'm using a Lumia 950 running Windows 10 Mobile.
 
+## Microsoft Band App vs FitBit App
+
+Although both apps are very good, my money would be on the Microsoft Band app, it's far more polished than the FitBit app, although both have a wealth of information on the screen that you can browse through and drill down into for more detailed analysis.
+
+The Microsoft Band app, to me, seems to be more intuitive and well designed, but then you should expect that from Microsoft.  You may feel different after comparing the apps so don't take my word for it.  Not that you should ever take my word for anything on here...
+
 ## Overall Impressions
 
 So far I'm chuffed with the Blaze, the out of box experience could have beeen better and why it lost my first sleep recording is a mystery.  It may well happen again at some point which will mean me going on forums and moaning, just to be told that it's the app and then for someone to blame Windows... bla bla bla yadda yadda.  Anyway, I have high hopes for this device and I haven't even looked at it from a programming perspective, but as a consumer buying a fitness wearable, it ticks all the boxes.
