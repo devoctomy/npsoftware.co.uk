@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Samsung Galaxy Note 9'
-date: 2018-11-20 19:00:00
+date: 2018-11-22 19:11:00
 image: '/assets/img/galaxynote9.jpg'
 description: 'Continuing my journey on the Android train'
 tags:
