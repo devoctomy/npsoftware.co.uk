@@ -1,0 +1,39 @@
+I"�<h2 id="down-with-content-management-systems">Down with Content Management Systems</h2>
+
+<p>I’m actually feeling quite liberated with my new site at the moment, and I know that might sound pretty geeky, but hear me out.  When I first started out creating a personal website for myself years ago, I wrote it all in HTML myself, it always looked shit, but it was simple and never got hacked (I never have liked HTML).  Then as I got older and wanted more features on my site, including a forum (for some odd reason), I resorted to using CMS systems.  I’ve used a few, DotNetNuke, Orchard CMS and also Sharepoint.  All of which should be protected with an SSL cert, otherwise you’re likely to have your credentials stolen, and even using an authentication provider won’t protect you from hacks.</p>
+
+<p>Basically, my quest for having something easy to update, actually made things more complicated and expensive in the long run, and I’ve wasted a lot of money doing so.</p>
+
+<h2 id="github-jekyll--travis-ci">GitHub, Jekyll &amp; Travis-CI</h2>
+
+<p>So what am I using now?  <a href="http://www.github.com">GitHub</a>, to store my site source code in a <a href="http://github.com/devoctomy/npsoftware.co.uk">public repository</a>, yup I don’t care if you can see the source code, there’s one piece of sensitive information in there and it’s encrypted using RSA, so all good.  I’m also using <a href="http://www.travis-ci.org">Travis-CI</a> to automatically compile my source code into a static website, in its source form it’s a <a href="https://jekyllrb.com/">Jekyll</a> website.  Once compiled it’s also automatically published to <a href="http://aws.amazon.com/">Amazon S3</a>.  That <em>might</em> sound complicated, but here’s my flow for writing a blog entry,</p>
+
+<ul>
+  <li>Check out the source code from GitHub (This is only done once)</li>
+  <li>Create a new markdown file in the ‘posts’ directory</li>
+  <li>Write my blog entry in the new file</li>
+  <li>Push my update to GitHub</li>
+</ul>
+
+<p>At this point Travis-CI automatically detects that the repository has changed, compiles my website and then publishes it to S3.  It even sends me an email to tell me if it succeeded or not, how simple is that!</p>
+
+<p>Even better…</p>
+
+<ul>
+  <li>GitHub is <strong>free</strong> for public repositories</li>
+  <li>Travis-CI is <strong>free</strong> for public GitHub repositories</li>
+  <li>Amazon S3 is <strong>super fast</strong>, and <strong>super cheap</strong>, like pennies in comparison to hosting a CMS</li>
+</ul>
+
+<p>Previously I was spending roughly £50 a month, hosting Orchard CMS on Microsoft Azure, that was easy enough to setup but involved also running a SQL server and using SSL certificates.  Blargh!</p>
+
+<h2 id="a-more-active-blog">A More Active Blog</h2>
+
+<p>The main thing I’m wanting to get out of this, aside from saving myself like £50 a month on Azure hosting, is to have a more active blog.  There’s so little to do in order to create engaging and attractively formatted content using this method that there should be nothing stopping me from a weekly blog entry or two.  That’s the hope anyway!</p>
+
+<h2 id="where-did-you-get-your-jekyll-template-from">Where Did You Get Your Jekyll Template From?</h2>
+
+<p>I’m basically using the first template I came across on <a href="http://jekyllthemes.org/">jekyllthemes.org</a>, you can find it on GitHub <a href="https://github.com/willianjusten/will-jekyll-template">here</a>, it’s by a guy named Will.  I’ve just basically modified it to my liking.  So I’m obviously super grateful to Will for making it open-source.</p>
+
+<p>Anyway, that’s it for my first blog post, I haven’t gone into technical detail about setting this up, by may do in a later post.  Peace out!</p>
+:ET
