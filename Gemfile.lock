@@ -77,7 +77,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (= 1.17.3)
   foreman
   jekyll
   rack-contrib
