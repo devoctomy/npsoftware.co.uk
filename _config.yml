@@ -9,7 +9,7 @@ googletagmanagerid: GTM-52DT3S
 
 # Test settings
 destination: _site
-host: 0.0.0.0
+host: 127.0.0.1
 
 # User settings
 username: Nick Pateman
