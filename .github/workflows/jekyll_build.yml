@@ -26,6 +26,9 @@ jobs:
         gem install bundler
         bundle install
 
+    - name: Check Date and Time
+      run: date        
+
     - name: Build the Jekyll site
       run: bundle exec jekyll build
 
