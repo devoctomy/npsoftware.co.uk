@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Move To GitHub Actions'
-date: 2024-05-28 18:50:00
+date: 2024-05-28 18:00:00
 image: '/assets/img/movetogithubactions.jpg'
 description: 'Goodbye Travis-CI and hello GitHub Actions'
 tags:
