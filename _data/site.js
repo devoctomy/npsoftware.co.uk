@@ -18,7 +18,7 @@ export default {
   flipboard_username: "firkinfedup",
   linkedin_username: "nickpateman",
 
-  repo_url: "https://github.com/devoctomy/npsoftware.co.uk",
+  repo_url: "https://github.com/NickDevoctomy/npsoftware.co.uk",
 
   // Settings for _layouts/compress.html.
   compress_html: {
