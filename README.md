@@ -55,9 +55,9 @@ Commit the updated `Gemfile.lock`.
 ## Deployment
 
 - `.github/workflows/build.yml` builds every push and pull request. It never deploys.
-- `.github/workflows/deploy.yml` deploys when a `v*` tag is pushed on a commit that is in `master`. It builds the site, syncs `_site/` to S3 and invalidates CloudFront.
+- `.github/workflows/deploy.yml` deploys when a `v*` tag is pushed on a commit that is in `main`. It builds the site, syncs `_site/` to S3 and invalidates CloudFront.
 
-To release, merge to `master`, then publish a GitHub release with a new tag such as `v2026.10.18`, or push a tag directly:
+To release, merge to `main`, then publish a GitHub release with a new tag such as `v2026.10.18`, or push a tag directly:
 
 ```bash
 git tag v2026.10.18

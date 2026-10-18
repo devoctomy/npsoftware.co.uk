@@ -24,15 +24,15 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Ensure a release tag on master is being deployed
+    - name: Ensure a release tag on main is being deployed
       run: |
         if [[ "$GITHUB_REF" != refs/tags/v* ]]; then
           echo "::error::Deploys must run from a v* tag, not $GITHUB_REF"
           exit 1
         fi
-        git fetch origin master
-        if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/master; then
-          echo "::error::$GITHUB_REF_NAME is not on master"
+        git fetch origin main
+        if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+          echo "::error::$GITHUB_REF_NAME is not on main"
           exit 1
         fi
 

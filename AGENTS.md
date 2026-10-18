@@ -42,6 +42,6 @@ bundle exec jekyll serve --force_polling       # http://127.0.0.1:4000
 ## CI/CD
 
 - `.github/workflows/build.yml` builds every push to any branch and every PR. It never deploys.
-- `.github/workflows/deploy.yml` deploys only from `v*` tags on commits in `master`, for example by publishing a GitHub release. It checks the tag is on `master`, runs the Jekyll build, then `aws s3 sync --delete` and a CloudFront invalidation. A tag that isn't on `master` fails before anything is uploaded.
+- `.github/workflows/deploy.yml` deploys only from `v*` tags on commits in `main`, for example by publishing a GitHub release. It checks the tag is on `main`, runs the Jekyll build, then `aws s3 sync --delete` and a CloudFront invalidation. A tag that isn't on `main` fails before anything is uploaded.
 - Both use Ruby 3.4 through `ruby/setup-ruby` with `bundler-cache`. The AWS credentials, bucket and distribution ID are secrets, and the deploy job runs in the `production` environment.
 - There is no Travis, Heroku or GitHub Pages deployment. Don't re-add a `CNAME`, `Procfile` or `config.ru`.
