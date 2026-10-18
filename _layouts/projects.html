@@ -1,0 +1,52 @@
+---
+layout: base
+---
+<article class="wrap wrap--medium projects">
+  <header class="article__header">
+    <h1 class="article__title">{{ title }}</h1>
+    {%- if description %}
+    <p class="article__lead">{{ description }}</p>
+    {%- endif %}
+  </header>
+
+  {%- assign intro = content | strip %}
+  {%- if intro != "" %}
+  <div class="projects__intro prose">
+    {{ content }}
+  </div>
+  {%- endif %}
+
+  <ol class="project-list">
+    {%- for project in collections.projects %}
+    <li class="project">
+      <div class="project__head">
+        <span class="company__mark" aria-hidden="true">{{ project.name | slice: 0 }}</span>
+        <h2 class="project__name">{{ project.name }}</h2>
+        {%- if project.status %}
+        <span class="tag">{{ project.status }}</span>
+        {%- endif %}
+      </div>
+      {%- assign body = project.content | strip %}
+      {%- if body != "" %}
+      <div class="project__body prose">
+        {{ project.content }}
+      </div>
+      {%- endif %}
+      {%- if project.skills.size > 0 %}
+      <ul class="skills" aria-label="Technologies">
+        {%- for skill in project.skills %}
+        <li class="skill">{{ skill }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- if project.links.size > 0 %}
+      <div class="project__links">
+        {%- for link in project.links %}
+        <a class="btn btn--ghost" href="{{ link.url }}" rel="noopener">{% include icon.html name=link.icon px=16 %}{{ link.label }}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</article>

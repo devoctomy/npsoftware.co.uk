@@ -38,6 +38,7 @@ export default {
   links: [
     { title: "Home", url: "/", nav: "home" },
     { title: "About", url: "/about/", nav: "about" },
-    { title: "Profile", url: "/profile/", nav: "profile" }
+    { title: "Profile", url: "/profile/", nav: "profile" },
+    { title: "Projects", url: "/projects/", nav: "projects" }
   ]
 };
