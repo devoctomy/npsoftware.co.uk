@@ -1,28 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    {% include head.html %}
-    <body>
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-52DT3S"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','{{ site.googletagmanagerid }}');</script>
-		<!-- End Google Tag Manager -->
-		
-        {% include svg-icons.html %}
-        {% include header-post.html %}
-        <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
+---
+layout: base
+---
+<article class="article wrap wrap--narrow">
+  <a class="back-link" href="/">{% include icon.html name="arrow-left" px=16 %}All posts</a>
 
-            <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                {{ content }}
-            </article>
+  <header class="article__header">
+    {%- if tags.size > 0 %}
+    <div class="chips">
+      {%- for tag in tags %}
+      <a class="tag tag--lg" href="/search/?tag={{ tag | url_encode }}">{{ tag }}</a>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+    <h1 class="article__title">{{ title }}</h1>
+    {%- if description %}
+    <p class="article__lead">{{ description }}</p>
+    {%- endif %}
+    <div class="byline">
+      <img class="avatar avatar--md" src="/assets/img/blog-author.jpg" alt="" width="48" height="48">
+      <div>
+        <p class="byline__name">{{ site.username }}</p>
+        <p class="byline__meta"><time datetime="{{ date | date_to_xmlschema }}">{{ date | date: "%e %B %Y" }}</time> · {{ content | reading_time }}</p>
+      </div>
+    </div>
+  </header>
 
-            {% include share.html %}
-            {% include author.html %}
-            {% include footer.html %}
-        </section>
-    </body>
-</html>
+  <div class="article__body prose">
+    {{ content }}
+  </div>
+
+  {% include share.html %}
+  {% include author.html %}
+</article>

@@ -1,0 +1,15 @@
+---
+layout: base
+---
+<article class="article wrap wrap--narrow">
+  <header class="article__header">
+    <h1 class="article__title">{{ title }}</h1>
+    {%- if description %}
+    <p class="article__lead">{{ description }}</p>
+    {%- endif %}
+  </header>
+
+  <div class="article__body prose">
+    {{ content }}
+  </div>
+</article>

@@ -16,6 +16,7 @@ export default {
   twitter_username: "npsoftwareuk",
   facebook_username: "npsoftwareuk",
   flipboard_username: "firkinfedup",
+  linkedin_username: "nickpateman",
 
   repo_url: "https://github.com/devoctomy/npsoftware.co.uk",
 
@@ -27,10 +28,16 @@ export default {
     profile: false
   },
 
-  // Links in the menu.
+  // Home page: the status pill above the greeting (leave empty to hide it)
+  // and the paragraph under it.
+  status: "Under maintenance",
+  intro: "This is my personal blog. It's having a bit of a refresh right now, so expect new posts soon.",
+
+  // Links in the menu. `nav` matches a page's `nav` front matter to mark it
+  // as the current page.
   links: [
-    { title: "Home", url: "/" },
-    { title: "Tags", url: "/tags" },
-    { title: "About Me", url: "/about" }
+    { title: "Home", url: "/", nav: "home" },
+    { title: "About", url: "/about/", nav: "about" },
+    { title: "Profile", url: "/profile/", nav: "profile" }
   ]
 };

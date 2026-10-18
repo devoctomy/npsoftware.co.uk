@@ -1,0 +1,88 @@
+---
+layout: base
+---
+<article class="wrap wrap--medium profile">
+  <header class="profile-hero">
+    {%- if photo %}
+    <img class="profile-hero__photo" src="{{ photo }}" alt="{{ name }}" width="132" height="132">
+    {%- endif %}
+    <div class="profile-hero__body">
+      <h1 class="profile-hero__name">{{ name }}</h1>
+      <p class="profile-hero__headline">{{ headline }}</p>
+      {%- if location %}
+      <p class="profile-hero__location">{% include icon.html name="pin" px=16 %}{{ location }}</p>
+      {%- endif %}
+      {%- if links.size > 0 %}
+      <div class="profile-hero__links">
+        {%- for link in links %}
+        <a class="btn btn--ghost" href="{{ link.url }}"{% unless link.url contains "mailto:" %} rel="noopener"{% endunless %}>{% include icon.html name=link.icon px=16 %}{{ link.label }}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </header>
+
+  {%- assign summary = content | strip %}
+  {%- if summary != "" %}
+  <div class="profile-summary prose">
+    {{ content }}
+  </div>
+  {%- endif %}
+
+  <section class="profile-section" aria-labelledby="experience">
+    <h2 class="section__title" id="experience">Experience</h2>
+    {%- assign companies = collections.experience | group_by_company %}
+    <ol class="timeline">
+      {%- for company in companies %}
+      <li class="company">
+        <div class="company__head">
+          <span class="company__mark" aria-hidden="true">{{ company.company | slice: 0 }}</span>
+          <div>
+            <h3 class="company__name">{{ company.company }}</h3>
+            <p class="company__meta">{{ company.employment }} · {{ company.start | duration: company.end }}{% if company.location %} · {{ company.location }}{% endif %}</p>
+          </div>
+        </div>
+        <ol class="roles">
+          {%- for role in company.roles %}
+          <li class="role">
+            <h4 class="role__title">{{ role.role }}</h4>
+            <p class="role__meta">{{ role.start | month }} – {{ role.end | month }} · {{ role.start | duration: role.end }}{% if role.workplace %} · {{ role.workplace }}{% endif %}</p>
+            {%- assign body = role.content | strip %}
+            {%- if body != "" %}
+            <div class="role__body prose">
+              {{ role.content }}
+            </div>
+            {%- endif %}
+            {%- if role.skills.size > 0 %}
+            <ul class="skills" aria-label="Skills">
+              {%- for skill in role.skills %}
+              <li class="skill">{{ skill }}</li>
+              {%- endfor %}
+            </ul>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ol>
+      </li>
+      {%- endfor %}
+    </ol>
+  </section>
+
+  {%- if skills.size > 0 %}
+  <section class="profile-section" aria-labelledby="skills">
+    <h2 class="section__title" id="skills">Skills</h2>
+    <div class="skill-groups">
+      {%- for group in skills %}
+      <div class="skill-group">
+        <h3 class="skill-group__title">{{ group.group }}</h3>
+        <ul class="skills">
+          {%- for skill in group.items %}
+          <li class="skill">{{ skill }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endif %}
+</article>

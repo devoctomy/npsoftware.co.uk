@@ -1,4 +1,5 @@
 import * as jekyll from "./_11ty/jekyll.js";
+import * as profile from "./_11ty/profile.js";
 
 // Post dates, the feed and the version timestamps are all in UTC.
 process.env.TZ = jekyll.TIMEZONE;
@@ -55,6 +56,7 @@ export default function (eleventyConfig) {
     escape: jekyll.escape,
     strip_html: jekyll.stripHtml,
     strip_newlines: jekyll.stripNewlines,
+    normalize_whitespace: jekyll.normalizeWhitespace,
     split: jekyll.split,
     truncate: jekyll.truncate,
     truncatewords: jekyll.truncatewords,
@@ -62,10 +64,38 @@ export default function (eleventyConfig) {
   };
   for (const [name, fn] of Object.entries(filters)) eleventyConfig.addFilter(name, fn);
 
+  // "3 min read", at 200 words a minute.
+  eleventyConfig.addFilter("reading_time", (html) => {
+    const words = jekyll.split(jekyll.stripHtml(html), " ").length;
+    return `${Math.max(1, Math.round(words / 200))} min read`;
+  });
+
+  // Profile page (see _11ty/profile.js).
+  eleventyConfig.addFilter("month", profile.formatMonth);
+  eleventyConfig.addFilter("duration", (start, end) => profile.duration(start, end));
+  eleventyConfig.addFilter("group_by_company", profile.groupByCompany);
+
+  // The years that have posts, newest first, for the search page's filter.
+  eleventyConfig.addFilter("post_years", (posts) =>
+    [...new Set(posts.map((post) => post.date.getUTCFullYear()))].sort((a, b) => b - a)
+  );
+
   // --- Collections --------------------------------------------------------
 
   // site.posts: newest first.
   eleventyConfig.addCollection("posts", (api) => jekyllPosts(api).reverse());
+
+  // Profile roles, newest first, each with its rendered description.
+  eleventyConfig.addCollection("experience", (api) =>
+    api
+      .getFilteredByGlob("profile/experience/*.md")
+      .map((item) => {
+        const role = { ...item.data };
+        Object.defineProperty(role, "content", { enumerable: true, get: () => item.templateContent });
+        return role;
+      })
+      .sort((a, b) => String(b.start).localeCompare(String(a.start)))
+  );
 
   // site.tags as [tag, posts] pairs: tags in the order first seen walking
   // posts oldest first, and each tag's posts newest first.
