@@ -1433,29 +1433,6 @@ pre code:after {
     text-decoration: none;
     color: #d24726;
 }
-.comments {
-    *zoom: 1;
-    width: auto;
-    max-width: 50rem;
-    float: none;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 0;
-    padding-right: 0;
-    padding: 0 1.25rem;
-}
-.comments:before, .comments:after {
-    content: '';
-    display: table;
-}
-.comments:after {
-    clear: both;
-}
-.comments h3 {
-    margin: 0 0 1.875rem;
-    font-size: 1.875rem;
-}
 footer {
     background: #d24726;
     padding: 1.563rem 0;

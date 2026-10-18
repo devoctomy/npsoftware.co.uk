@@ -1,39 +1,30 @@
-# npSoftware.co.uk Jekyll Website
+# npSoftware.co.uk
 
-Source for [www.npsoftware.co.uk](https://www.npsoftware.co.uk), built with Jekyll 4.
+Source for [www.npsoftware.co.uk](https://www.npsoftware.co.uk), built with [Eleventy](https://www.11ty.dev/).
 
 ## Setting up WSL (Ubuntu)
 
-Install Ruby and the build tools:
+Install Node.js 22 or later (see `.nvmrc`), for example from the distro or with [nvm](https://github.com/nvm-sh/nvm):
 
 ```bash
-sudo apt update
-sudo apt install ruby-full build-essential zlib1g-dev
+nvm install
 ```
 
-Install Bundler for your user (no `sudo`), and put its bin directory on your `PATH`:
+Then install the dependencies:
 
 ```bash
-gem install --user-install bundler
-echo 'export PATH="$(ruby -e "print Gem.user_dir")/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
-
-Install the site's gems into `vendor/bundle` (ignored by git):
-
-```bash
-bundle config set --local path vendor/bundle
-bundle install
+npm ci
 ```
 
 ## Building and previewing
 
 ```bash
-bundle exec jekyll build              # output in _site/
-bundle exec jekyll serve --livereload # http://127.0.0.1:4000
+npm run build   # output in _site/
+npm run serve   # http://localhost:8080, rebuilds on change
+npm run compare # compare _site/ with the live site
 ```
 
-When the repository is on the Windows drive (`/mnt/...`), file watching can be unreliable. Use `bundle exec jekyll serve --force_polling` or `--no-watch` if changes are not picked up.
+`npm run compare -- <url or directory>` compares against another copy of the site instead. It ignores differences a browser wouldn't show, such as whitespace and entity encoding.
 
 ## Writing a post
 
@@ -41,16 +32,18 @@ When the repository is on the Windows drive (`/mnt/...`), file watching can be u
 ./initpost.sh -c My New Post Title
 ```
 
-This creates `_posts/YYYY-MM-DD-my-new-post-title.md` with the front matter filled in.
+This creates `_posts/YYYY-MM-DD-my-new-post-title.md` with the front matter filled in. The post's URL is its file name without the date, e.g. `/my-new-post-title/`.
 
-## Updating gems
+## Updating dependencies
 
 ```bash
-bundle update
-bundle exec jekyll build
+npm outdated
+npm install --save-exact <package>@<version>
+npm run build
+npm run compare
 ```
 
-Commit the updated `Gemfile.lock`.
+Commit the updated `package.json` and `package-lock.json`.
 
 ## Deployment
 
