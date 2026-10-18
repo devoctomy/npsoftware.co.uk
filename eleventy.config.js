@@ -98,6 +98,18 @@ export default function (eleventyConfig) {
       .sort((a, b) => String(b.start).localeCompare(String(a.start)))
   );
 
+  // Projects by `order`, then name, each with its rendered description.
+  eleventyConfig.addCollection("projects", (api) =>
+    api
+      .getFilteredByGlob("projects/items/*.md")
+      .map((item) => {
+        const project = { ...item.data };
+        Object.defineProperty(project, "content", { enumerable: true, get: () => item.templateContent });
+        return project;
+      })
+      .sort((a, b) => (a.order ?? Infinity) - (b.order ?? Infinity) || String(a.name).localeCompare(String(b.name)))
+  );
+
   // site.tags as [tag, posts] pairs: tags in the order first seen walking
   // posts oldest first, and each tag's posts newest first.
   eleventyConfig.addCollection("tagList", (api) => {

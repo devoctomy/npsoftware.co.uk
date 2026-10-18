@@ -580,6 +580,26 @@ button.icon-btn { padding: 0; font: inherit; cursor: pointer; }
   .role::before { left: -30px; }
 }
 
+/* --- Projects -------------------------------------------------------------- */
+
+.projects { padding-top: 56px; padding-bottom: 96px; }
+.projects__intro { margin-top: 32px; font-size: 18px; }
+
+.project-list { margin: 40px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 20px; }
+
+.project {
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.project__head { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+.project__name { margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
+.project__head .tag { align-self: center; }
+.project__body { margin-top: 20px; font-size: 17px; line-height: 1.7; }
+.project__body p, .project__body ul { margin-bottom: 14px; }
+.project__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+
 /* --- Search ---------------------------------------------------------------- */
 
 .search-page { padding-top: 56px; padding-bottom: 96px; }
