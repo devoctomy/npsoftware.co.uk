@@ -491,6 +491,30 @@ button.icon-btn { padding: 0; font: inherit; cursor: pointer; }
   border: 1px solid var(--line);
 }
 
+.profile-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 16px 24px;
+  margin-top: 20px;
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: var(--radius-lg);
+  background: var(--accent-soft);
+}
+.profile-callout__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--accent);
+}
+.profile-callout__body { flex: 1 1 320px; min-width: 0; font-size: 17px; line-height: 1.7; }
+.profile-callout__body p { margin-bottom: 14px; }
+
 .profile-section { margin-top: 56px; }
 
 .timeline { margin: 28px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 20px; }

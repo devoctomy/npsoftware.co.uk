@@ -57,6 +57,7 @@ export default function (eleventyConfig) {
     strip_html: jekyll.stripHtml,
     strip_newlines: jekyll.stripNewlines,
     normalize_whitespace: jekyll.normalizeWhitespace,
+    markdownify: (input) => jekyll.markdown.render(String(input ?? "")),
     split: jekyll.split,
     truncate: jekyll.truncate,
     truncatewords: jekyll.truncatewords,

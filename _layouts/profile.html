@@ -29,6 +29,15 @@ layout: base
   </div>
   {%- endif %}
 
+  {%- for callout in callouts %}
+  <aside class="profile-callout">
+    <span class="profile-callout__icon">{% include icon.html name=callout.icon px=28 %}</span>
+    <div class="profile-callout__body prose">
+      {{ callout.text | markdownify }}
+    </div>
+  </aside>
+  {%- endfor %}
+
   <section class="profile-section" aria-labelledby="experience">
     <h2 class="section__title" id="experience">Experience</h2>
     {%- assign companies = collections.experience | group_by_company %}
