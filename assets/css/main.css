@@ -1472,4 +1472,21 @@ footer p, footer a {
 }
 footer a:hover {
     color: #900;
+}footer p.version {
+    margin-top: 0.75rem;
+}
+footer a.version-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.875rem;
+    font-variant-numeric: tabular-nums;
+}
+footer a.version-chip .icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
 }

@@ -19,6 +19,7 @@ twitter_username: npsoftwareuk
 disqus_username: npsoftware
 facebook_username: npsoftwareuk
 flipboard_username: firkinfedup
+repo_url: https://github.com/devoctomy/npsoftware.co.uk
 
 # Build settings
 markdown: kramdown
