@@ -1,10 +1,9 @@
-# forced commit
 
 # Site settings
 title: npSoftware
 description: Personal blog of Nick Pateman
 baseurl: ""
-url: "http://www.npsoftware.co.uk"
+url: "https://www.npsoftware.co.uk"
 googletagmanagerid: GTM-52DT3S
 
 # Test settings
@@ -23,8 +22,9 @@ flipboard_username: firkinfedup
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
+timezone: Etc/UTC
 
 # html minify
 compress_html:
@@ -43,5 +43,5 @@ links:
   - title: About Me
     url: /about
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules', 'vendor']
+# Files that should not be copied into _site
+exclude: ['README.md', 'AGENTS.md', 'LICENSE', 'Gemfile', 'Gemfile.lock', 'initpost.sh', 'vendor']
