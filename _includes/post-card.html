@@ -1,0 +1,11 @@
+{%- assign post = include.post -%}
+<a class="post-card" href="{{ post.url }}"{% if include.searchable %} data-post data-title="{{ post.title | escape }}" data-text="{{ post.title | append: ' ' | append: post.description | append: ' ' | append: post.content | strip_html | normalize_whitespace | truncatewords: 300, '' | downcase | escape }}" data-tags="{{ post.tags | join: '|' | escape }}" data-year="{{ post.date | date: '%Y' }}" data-date="{{ post.date | date_to_xmlschema }}"{% endif %}>
+  {%- if post.tags.size > 0 %}
+  <span class="tag">{{ post.tags | first }}</span>
+  {%- endif %}
+  <h3 class="post-card__title">{{ post.title }}</h3>
+  {%- if post.description %}
+  <p class="post-card__text">{{ post.description }}</p>
+  {%- endif %}
+  <span class="post-card__meta">{{ post.date | date: "%e %b %Y" }} · {{ post.content | reading_time }}</span>
+</a>

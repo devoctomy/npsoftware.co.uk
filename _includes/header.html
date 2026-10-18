@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/"><span class="brand__mark">np</span>{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      {%- for link in site.links %}
+      <a href="{{ link.url }}"{% if nav == link.nav %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {%- endfor %}
+    </nav>
+    <div class="site-header__tools">
+      <form class="header-search" role="search" action="/search/" method="get">
+        {% include icon.html name="search" px=17 %}
+        <label class="visually-hidden" for="header-q">Search posts</label>
+        <input id="header-q" name="q" type="search" placeholder="Search posts">
+      </form>
+      <a class="icon-btn" href="/feed.xml" aria-label="RSS feed">{% include icon.html name="rss" %}</a>
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle data-mode="system" aria-label="Colour theme: system" title="Colour theme: system" hidden>
+        <span data-icon="system">{% include icon.html name="monitor" %}</span>
+        <span data-icon="light">{% include icon.html name="sun" %}</span>
+        <span data-icon="dark">{% include icon.html name="moon" %}</span>
+      </button>
+    </div>
+  </div>
+</header>

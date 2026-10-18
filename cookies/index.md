@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: page
 title: "Our Cookie Policy"
 permalink: /cookies/index.html
 description:
@@ -12,8 +12,6 @@ description:
 Cookies are simple text files that are stored on your computer or mobile device by a website’s server. Each cookie is unique to your web browser. It will contain some anonymous information such as a unique identifier, website’s domain name, and some digits and numbers.
 
 ## What types of cookies do we use?
-
-<p><br /></p>
 
 ### Necessary cookies
 

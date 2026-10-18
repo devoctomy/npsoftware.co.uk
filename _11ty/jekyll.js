@@ -185,6 +185,8 @@ export const stripHtml = (input) =>
 
 export const stripNewlines = (input) => String(input ?? "").replace(/\r?\n/g, "");
 
+export const normalizeWhitespace = (input) => String(input ?? "").replace(/[ \n\r\t\f\v]+/g, " ").trim();
+
 // Ruby's String#split. A single space splits on runs of ASCII whitespace and
 // ignores leading whitespace; any other separator is literal. Either way,
 // trailing empty strings are dropped. _layouts/compress.html relies on this.

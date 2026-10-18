@@ -1,10 +1,21 @@
-<footer>
-    <p>Made with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and built using <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a></p>
-	<p><a href="/cookies">Our Cookie Policy</a></p>
-	{% if build.version.size > 0 %}
-	<p class="version"><a class="version-chip" href="{{ build.version_url }}" target="_blank" rel="noopener" title="This version of the site on GitHub"><svg class="icon icon-tag"><use xlink:href="#icon-tag"></use></svg>{{ build.version }}</a></p>
-	{% endif %}
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="site-footer__brand">
+      <span class="brand__mark brand__mark--sm" aria-hidden="true">np</span>
+      <span>© {{ site.title }} · {{ site.description }}</span>
+    </div>
+    <div class="site-footer__links">
+      <a href="/cookies/">Cookie policy</a>
+      <a href="/feed.xml">RSS</a>
+      <span>Built with Eleventy + GitHub Actions</span>
+      {%- if build.version.size > 0 %}
+      <a class="version-chip" href="{{ build.version_url }}" rel="noopener" title="This version of the site on GitHub">{% include icon.html name="tag" px=14 %}{{ build.version }}</a>
+      {%- endif %}
+    </div>
+  </div>
 </footer>
-<script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "/assets/js/popper.js" | relative_url }}"></script>
-<script> window.start.init({Palette:"palette7",Mode:"floating right",Theme:"block",Message:"This website uses cookies to ensure you get the best experience. Please read our Cookie Policy for more information. Continuing to use the website is acceptance of the policy.",Location:"/cookies",LinkText:"Read Our Cookie Policy",Time:"1",})</script>
+
+<div class="cookie-notice" data-cookie-notice hidden>
+  <p>This website uses cookies to give you the best experience. <a href="/cookies/">Read our cookie policy</a> for more information.</p>
+  <button type="button" class="btn btn--dark btn--sm" data-cookie-accept>Got it</button>
+</div>

@@ -1,34 +1,68 @@
 ---
-layout: default
+layout: base
+nav: home
 ---
+{%- assign latest = collections.posts | first -%}
+<section class="wrap hero">
+  <div class="hero__intro">
+    {%- if site.status %}
+    <span class="pill"><span class="pill__dot"></span>{{ site.status }}</span>
+    {%- endif %}
+    <h1 class="hero__title">Hi, I'm Nick.</h1>
+    <p class="hero__subtitle">{{ site.user_description }}.</p>
+    <p class="hero__text">{{ site.intro }}</p>
+    <div class="hero__actions">
+      {%- if latest %}
+      <a class="btn btn--accent" href="{{ latest.url }}">Read the latest {% include icon.html name="arrow-right" %}</a>
+      {%- endif %}
+      <a class="btn btn--outline" href="/about/">About me</a>
+    </div>
+    {% include social.html %}
+  </div>
 
-<main id="scroll" class="home" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
-    {% for post in collections.posts %}
-        <article role="article" class="post-item" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
-                <a class="datetime" href="{{ post.url | prepend: site.baseurl }}">
-                    <meta itemprop="datePublished" content="{{ post.date | date_to_s }}">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        <span class="day">
-                            {{ post.date | date: "%d" }}
-                        </span>
-                        <span class="month-year">
-                            {{ post.date | date: "%B %Y" }}
-                        </span>
-                    </time>
-                </a>
-                <div class="content">
-                    <a href="{{ post.url | prepend: site.baseurl }}"><h2 class="post-title" itemprop="name">{{ post.title }}</h2></a>
-                    <p class="description">
-                        {{ post.content | strip_html | truncatewords:40 }}
-                        <a href="{{ post.url | prepend: site.baseurl }}" class="link">Read more about {{post.title}}</a>
-                    </p>
+  {%- if latest %}
+  <a class="feature-card" href="{{ latest.url }}">
+    <div class="feature-card__top">
+      <span class="feature-card__label">Latest post</span>
+      <span class="feature-card__meta">{{ latest.date | date: "%e %b %Y" }} · {{ latest.content | reading_time }}</span>
+    </div>
+    <h2 class="feature-card__title">{{ latest.title }}</h2>
+    {%- if latest.description %}
+    <p class="feature-card__text">{{ latest.description }}</p>
+    {%- endif %}
+    <div class="feature-card__footer">
+      <img class="avatar" src="/assets/img/blog-author.jpg" alt="" width="40" height="40">
+      <span>{{ site.username }}</span>
+      <span class="feature-card__read">Read {% include icon.html name="arrow-right" px=16 %}</span>
+    </div>
+  </a>
+  {%- endif %}
+</section>
 
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            <a href="{{ baseurl }}/tags/#{{tag}}">{{ tag }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-        </article>
-    {% endfor %}
-</main>
+<section class="wrap section">
+  <div class="section__head">
+    <h2 class="section__title">Latest posts</h2>
+    <div class="chips">
+      <a class="chip chip--dark" href="/search/">All</a>
+      {%- for tag in collections.tagList %}
+      <a class="chip" href="/search/?tag={{ tag[0] | url_encode }}">{{ tag[0] }} · {{ tag[1].size }}</a>
+      {%- endfor %}
+    </div>
+  </div>
+  <div class="card-grid">
+    {%- for post in collections.posts %}
+    {% include post-card.html post=post %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="wrap section section--last">
+  <div class="rss-box">
+    <span class="rss-box__icon">{% include icon.html name="rss" px=24 %}</span>
+    <div class="rss-box__body">
+      <h2 class="rss-box__title">Follow along</h2>
+      <p class="rss-box__text">New posts land in the RSS feed as soon as they're published.</p>
+    </div>
+    <a class="btn btn--dark btn--sm" href="/feed.xml">Subscribe via RSS</a>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+---
+layout: base
+nav: search
+title: Search
+description: "Find posts by keyword, or narrow things down by tag."
+permalink: /search/index.html
+---
+<section class="wrap search-page" data-search>
+  <h1 class="search-page__title">Search</h1>
+  <p class="search-page__intro">Find posts by keyword, or narrow things down by tag.</p>
+
+  <form class="search-box" role="search" action="/search/" method="get" data-search-form>
+    {% include icon.html name="search" px=22 %}
+    <label class="visually-hidden" for="search-q">Search posts and tags</label>
+    <input id="search-q" name="q" type="search" autocomplete="off" placeholder="Search posts and tags" data-search-input>
+  </form>
+
+  <div class="filters">
+    <fieldset class="filters__group">
+      <legend class="filters__label">Tags</legend>
+      {%- for tag in collections.tagList %}
+      <button type="button" class="chip" aria-pressed="false" data-filter="tag" data-value="{{ tag[0] | escape }}">{{ tag[0] }}</button>
+      {%- endfor %}
+    </fieldset>
+    <fieldset class="filters__group">
+      <legend class="filters__label">Year</legend>
+      {%- assign years = collections.posts | post_years -%}
+      {%- for year in years %}
+      <button type="button" class="chip" aria-pressed="false" data-filter="year" data-value="{{ year }}">{{ year }}</button>
+      {%- endfor %}
+    </fieldset>
+    <button type="button" class="link-btn" data-search-reset>Clear filters</button>
+  </div>
+
+  <div class="results-bar">
+    <p class="results-bar__summary" aria-live="polite" data-search-summary>{{ collections.posts.size }} {% if collections.posts.size == 1 %}post{% else %}posts{% endif %}</p>
+    <button type="button" class="btn btn--ghost" data-search-sort>Newest first</button>
+  </div>
+
+  <div class="card-grid card-grid--results" data-search-results>
+    {%- for post in collections.posts %}
+    {% include post-card.html post=post searchable=true %}
+    {%- endfor %}
+  </div>
+  <p class="results-empty" data-search-empty hidden>Nothing matches. Try fewer filters or a different search.</p>
+</section>
